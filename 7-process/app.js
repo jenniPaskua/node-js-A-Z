@@ -14,6 +14,7 @@ setTimeout(() => {
   console.log("setTimeout");
 }, 0);
 
+//task queue 에 값이 있어도 무시하고 가장 먼저 호출하도록 한다.
 process.nextTick(() => {
   console.log("nextTick");
 });
