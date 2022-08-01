@@ -1,7 +1,7 @@
 const fs = require("fs").promises;
 
 // read a file
-fs.readFile("./file-text.txt")
+fs.readFile("./file-text.txt", "utf8")
   .then((data) => console.log("data:", data))
   .catch(console.error);
 
