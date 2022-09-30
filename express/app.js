@@ -9,5 +9,8 @@ app.get("/sky/:id", (req, res, next) => {
 
   res.send("hi!");
 });
+app.get("/", (req, res, next) => {
+  console.log("get");
+});
 app.listen(8080);
 // port IP주소
