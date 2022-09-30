@@ -1,42 +1,18 @@
 import express from "express";
+import fs from "fs/promises";
 const app = express();
 
-app.all("/api", (req, res, next) => {
-  console.log("all");
-  next();
-});
-
-app.use("/sky", (req, res, next) => {
-  console.log("use");
-  next();
-});
-
-// middleware에 대하여
-// 설정된 순서가 중요함 - next()
-app.get(
-  "/",
-  (req, res, next) => {
-    console.log("first");
-    next(new Error("error"));
-  },
-  (req, res, next) => {
-    console.log("first2");
-    next();
-  }
-);
-
 app.get("/", (req, res, next) => {
-  console.log("second");
-});
-
-app.use((req, res, next) => {
-  res.status(404).send("Not available!");
+  return fsAsync.readFile("/file2.txt").catch(next);
 });
 
 app.use((error, req, res, next) => {
   console.error(error);
-  res.status(500).send("Sorry, try later!");
+  res.status(500).json({message: "Something went wrong"});
+  next();
 });
 
+//github.com/expressjs/express/issues/2259#issuecomment-433586394
+//github.com/blakeembrey/async-middleware
+
 app.listen(8080);
-// port IP주소
