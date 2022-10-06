@@ -1,3 +1,6 @@
+// buffer and steam
+// memory & time efficiency
+
 // Fixed-size chuck of memory
 // array of integers, byte of data
 
