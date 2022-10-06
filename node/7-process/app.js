@@ -19,6 +19,16 @@ process.nextTick(() => {
   console.log("nextTick");
 });
 
-for (let i = 0; i < 1000000; i++) {
+for (let i = 0; i < 1000; i++) {
   console.log("for loop");
 }
+
+/*
+r loop
+for loop
+for loop
+for loop
+for loop
+nextTick
+setTimeout
+*/
