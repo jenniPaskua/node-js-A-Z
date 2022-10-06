@@ -1,5 +1,6 @@
 function sayHello() {
   console.log("hello!");
+  console.log("ghelsj");
 }
 
 function calculate(x, y) {
