@@ -1,6 +1,7 @@
 function hello() {
   console.log(this);
   console.log(this === global);
+  // 함수 안에서 this는 글로벌이다
 }
 
 hello();
