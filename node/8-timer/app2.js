@@ -5,4 +5,14 @@ setTimeout(() => {
   console.log("setTimeout 0");
 }, 0);
 
-for (let i = 0; i < 10000000; i++) {}
+for (let i = 0; i < 1000; i++) {}
+
+// console.log("code2");
+// setImmediate(() => {
+//   console.log("setImmediate");
+// });
+
+// console.log("code3");
+// process.nextTick(() => {
+//   console.log("process.nextTick");
+// });
